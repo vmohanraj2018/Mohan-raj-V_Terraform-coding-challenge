@@ -31,10 +31,7 @@ Steps to run the automation :
     
   *Initialize Terraform
           # terraform init
-          
-  * Validate configuration
-          # terraform validate
-    
+  
   * Preview the changes
           # terraform plan -var="key_pair_name=mumbai" -var="db_password=12345678"
     
