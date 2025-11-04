@@ -26,16 +26,16 @@ Steps to run the automation :
    
 8.Now need to intialise,plan and apply to create automation sing Terraform
 
-  * Move into directory
+   * Move into directory
           # cd terraform_challenge
     
-  *Initialize Terraform
+   *Initialize Terraform
           # terraform init
   
-  * Preview the changes
+   * Preview the changes
           # terraform plan -var="key_pair_name=mumbai" -var="db_password=12345678"
     
-  * Apply changes
+   * Apply changes
           # terraform apply -auto-approve -var="key_pair_name=mumbai" -var="db_password=12345678"
 
    
