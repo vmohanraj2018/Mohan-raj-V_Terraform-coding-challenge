@@ -38,6 +38,3 @@ Steps to run the automation :
    * Apply changes
           # terraform apply -auto-approve -var="key_pair_name=mumbai" -var="db_password=12345678"
 
-   OUTPUTS:
-     
-     <img width="1920" height="1020" alt="Screenshot 2025-11-04 170628" src="https://github.com/user-attachments/assets/4bca050f-2707-4304-b09f-e31112487c66" />
