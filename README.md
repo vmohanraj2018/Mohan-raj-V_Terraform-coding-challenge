@@ -18,27 +18,23 @@ Steps to run the automation :
 
 7.Copy the file content in repository and paste it accordingly to their names
 
-   # vi main.tf ->paste contents from main.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
+    # vi main.tf ->paste contents from main.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
    
-   # vi variables.tf ->paste contents from variables.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
+    # vi variables.tf ->paste contents from variables.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
    
-   # vi outputs.tf ->paste contents from outputs.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
+    # vi outputs.tf ->paste contents from outputs.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
    
 8.Now need to intialise,plan and apply to create automation sing Terraform
 
   * Move into directory
-  # cd terraform_challenge
-
+          # cd terraform_challenge
   *Initialize Terraform
-  # terraform init
-
+          # terraform init
   * Validate configuration
-  # terraform validate
-
+          # terraform validate
   * Preview the changes
-  # terraform plan -var="key_pair_name=mumbai" -var="db_password=12345678"
-  
+          # terraform plan -var="key_pair_name=mumbai" -var="db_password=12345678"
   * Apply changes
-  # terraform apply -auto-approve -var="key_pair_name=mumbai" -var="db_password=12345678"
+          # terraform apply -auto-approve -var="key_pair_name=mumbai" -var="db_password=12345678"
 
    
