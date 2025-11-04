@@ -1,28 +1,33 @@
 # Mohan-raj-V_Terraform-coding-challenge
 CHALLENGE: Infrastructure Provisioning with Terraform
 
-PROBLEM: You are tasked with provisioning cloud resources using Terraform to set up a basic web
-application infrastructure. Your infrastructure should consist of the following components:
-An AWS EC2 instance running a basic web server.
-An AWS RDS MySQL database for storing application data.
-Write Terraform configuration files to provision this infrastructure.
-
-REQUIRMENTS:
-Create an EC2 instance with the following specifications:
-Instance Type: t2.micro
-AMI: Ubuntu Server 20.04 LTS
-Security Group: Allow incoming HTTP (port 80) and SSH (port 22) traffic.
-Create an RDS MySQL instance with the following specifications:
-Instance Class: db.t2.micro
-Engine: MySQL
-Allow incoming traffic on port 3306 from the EC2 instance&#39;s security group.
-
-INSTRUCTIONS:
-Create a directory named terraform_challenge.
-Inside the directory, create the following Terraform files:
-main.tf: Define your resources here.
-variables.tf: Define variables for customization.
-outputs.tf: Define outputs for displaying useful information.
-
 SOLUTION:
 This repository consits of main.tf,variables.tf,outputs.tf files
+Steps to run the automation :
+1.Create EC2 server in AWS on ap-south-1 region with key pair and select ubuntu version 24.04 as AMI
+2.Connect the server with putty using keypair and login server by entering "ubuntu"
+3.Become a root using this command | sudo su -
+4.Install the terraform by browsing terraform ubuntu installation and follow the process in terraform hashicorp installation page
+5.Creater a Directory Terraform_challenge | # mkdir Terraform_challenge
+6.Create main.tf,variables.tf,output.tf files in that directory | # cd Terraform_challenge/touch main.tf/touch variables.tf/outputs.tf
+7.Copy the file content in repository and paste it accordingly to their names
+   / # vi main.tf ->paste contents from main.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
+    / # vi variables.tf ->paste contents from variables.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
+     / # vi outputs.tf ->paste contents from outputs.tf file by clicking I to enable insert mode in vim editor and after completing press ESC+:wq! to save and exit.
+8.Now need to intialise,plan and apply to create automation sing Terraform
+  * Move into directory
+  # cd terraform_challenge
+
+  *Initialize Terraform
+  # terraform init
+
+  * Validate configuration
+  # terraform validate
+
+  * Preview the changes
+  # terraform plan -var="key_pair_name=mumbai" -var="db_password=12345678"
+  
+  * Apply changes
+  # terraform apply -auto-approve -var="key_pair_name=mumbai" -var="db_password=12345678"
+
+   
