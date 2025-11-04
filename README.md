@@ -28,12 +28,16 @@ Steps to run the automation :
 
   * Move into directory
           # cd terraform_challenge
+    
   *Initialize Terraform
           # terraform init
+          
   * Validate configuration
           # terraform validate
+    
   * Preview the changes
           # terraform plan -var="key_pair_name=mumbai" -var="db_password=12345678"
+    
   * Apply changes
           # terraform apply -auto-approve -var="key_pair_name=mumbai" -var="db_password=12345678"
 
